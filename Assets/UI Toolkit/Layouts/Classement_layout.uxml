@@ -2,8 +2,27 @@
     <Style src="project://database/Assets/UI%20Toolkit/Styles/Classement_style.uss?fileID=7433441132597879392&amp;guid=e201f0ce0b68b77469e17fbc6298855a&amp;type=3#Classement_style" />
     <ui:VisualElement name="MainContainer">
         <ui:VisualElement name="Fenetre">
-            <ui:VisualElement name="Header" />
-            <ui:VisualElement name="Body" />
+            <ui:VisualElement name="Header" style="align-items: center;">
+                <ui:Label text="Classement" name="Classement" />
+                <ui:Button name="Quit" style="background-image: none; background-color: rgba(51, 51, 51, 255);">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Images/Vector.png?fileID=21300000&amp;guid=ea2a3af71c558c64e8e70cd0fdc10e84&amp;type=3#Vector&apos;); width: 14px; height: 14px;" />
+                </ui:Button>
+            </ui:VisualElement>
+            <ui:VisualElement name="Body">
+                <ui:VisualElement name="Tools">
+                    <ui:VisualElement name="Add">
+                        <ui:TextField text="Nouveau participant" name="TextField" />
+                        <ui:Button text="Ajouter à la liste" name="AddButton" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Switch">
+                        <ui:Toggle label="Toggle" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:ListView focusable="true" name="List" />
+                <ui:VisualElement name="Delete" style="flex-direction: row;">
+                    <ui:Button text="Button" display-tooltip-when-elided="true" />
+                </ui:VisualElement>
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
