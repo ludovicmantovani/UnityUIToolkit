@@ -1,10 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UIElements;
 using UnityEngine;
-using System;
 
-namespace UI
+namespace View
 {
     public class AddRank : MonoBehaviour
     {
@@ -68,7 +66,8 @@ namespace UI
         /// </summary>
         private void SetButtonStatus()
         {
-            addButton.SetEnabled(_canAdd);
+            if (addButton != null)
+                addButton.SetEnabled(_canAdd);
         }
         /// <summary>
         /// Add new rank in list.

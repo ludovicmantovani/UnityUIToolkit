@@ -1,5 +1,3 @@
-using View;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,7 +23,7 @@ namespace Controller
         /// Add name in rank list.
         /// Can choose if insert is in first or last position.
         /// No insert if max slot is reached.
-        /// Make event after insert. 
+        /// Make onUpdateRanking event after insert. 
         /// </summary>
         /// <param name="name"></param>
         /// <param name="lastPosition"></param>
@@ -39,6 +37,19 @@ namespace Controller
                     onUpdateRanking(_rankList);
             }
         }
+        /// <summary>
+        /// Remove name in rank list.
+        /// Make onUpdateRanking event after remove.
+        /// </summary>
+        /// <param name="index"></param>
+        public void DeleteRank(int index)
+        {
+            if (index >= 0 && index < _rankList.Count)
+            {
+                _rankList.RemoveAt(index);
+                if (onUpdateRanking != null)
+                    onUpdateRanking(_rankList);
+            }
+        }
     }
-
 }
