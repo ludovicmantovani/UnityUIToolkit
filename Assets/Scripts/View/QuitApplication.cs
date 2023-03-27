@@ -8,18 +8,18 @@ namespace UI
 {
     public class QuitApplication : MonoBehaviour
     {
-        [SerializeField] private string VisualElementName = "Quit";
+        [Header("Visual Element")]
+        [SerializeField] private string VisualButtonElementName = "Quit";
 
         private UIDocument uiDocument = null;
-        private Button quitButton = null;
 
-        void Start()
+        private void OnEnable()
         {
             // Connect with UI
             if (TryGetComponent<UIDocument>(out uiDocument))
             {
                 // Get Specific button
-                quitButton = uiDocument.rootVisualElement.Q<Button>(VisualElementName);
+                Button quitButton = uiDocument.rootVisualElement.Q<Button>(VisualButtonElementName);
                 // Set call function
                 if (quitButton != null) quitButton.clicked += Exit;
             }

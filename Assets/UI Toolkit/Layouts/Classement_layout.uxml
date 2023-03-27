@@ -15,12 +15,12 @@
                         <ui:Button text="Ajouter à la liste" name="AddButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="Switch">
-                        <ui:Toggle label="Toggle" />
+                        <ui:Toggle label="Toggle" name="Toggle"/>
                     </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:ListView focusable="true" name="List" />
                 <ui:VisualElement name="Delete" style="flex-direction: row;">
-                    <ui:Button text="Button" display-tooltip-when-elided="true" />
+                    <ui:Button text="Button" name="DeleteButton" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
