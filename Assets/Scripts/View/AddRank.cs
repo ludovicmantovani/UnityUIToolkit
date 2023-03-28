@@ -12,10 +12,12 @@ namespace View
         [Header("Visual Element")]
         [SerializeField] private string textFieldName = "TextField";
         [SerializeField] private string addButtonName = "AddButton";
+        [SerializeField] private string addToggleName = "Toggle";
 
         private UIDocument uiDocument = null;
         private TextField textField = null;
         private Button addButton = null;
+        private Toggle addToggle = null;
 
         private bool _canAdd = true;
 
@@ -25,6 +27,7 @@ namespace View
             {
                 textField = uiDocument.rootVisualElement.Q<TextField>(textFieldName);
                 addButton = uiDocument.rootVisualElement.Q<Button>(addButtonName);
+                addToggle = uiDocument.rootVisualElement.Q<Toggle>(addToggleName);
                 SetUICallback();
             }
             Controller.RankManager.onUpdateRanking += SetAddStatus;
@@ -77,7 +80,9 @@ namespace View
             if (textField != null && textField.text.Length > 0)
             {
                 if (rankManager != null)
-                    rankManager.AddRank(textField.text);
+                    rankManager.AddRank(
+                        textField.text,
+                        addToggle!=null ? addToggle.value : true);
                 textField.value = "";
             }
         }

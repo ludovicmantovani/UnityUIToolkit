@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Layouts/Resources/RankItem.uss?fileID=7433441132597879392&amp;guid=62cd6d4fd41e76f40a46c74098e42f8b&amp;type=3#RankItem" />
+    <ui:VisualElement name="RankItem" style="margin-top: 5px; margin-left: 5px; margin-right: 5px;">
+        <ui:Label text="0" name="RankIndex" />
+        <ui:Label text="Name" display-tooltip-when-elided="true" name="RankName" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,24 @@
+#RankItem {
+    flex-direction: row;
+    height: 40px;
+    flex-grow: 0;
+    width: auto;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 19px;
+    padding-right: 16px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(51, 51, 51);
+    -unity-text-align: middle-left;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+#RankIndex {
+    flex-grow: 1;
+}
+
+#RankName {
+    flex-grow: 50;
+}

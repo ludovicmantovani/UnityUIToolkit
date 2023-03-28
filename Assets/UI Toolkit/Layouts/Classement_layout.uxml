@@ -2,25 +2,23 @@
     <Style src="project://database/Assets/UI%20Toolkit/Styles/Classement_style.uss?fileID=7433441132597879392&amp;guid=e201f0ce0b68b77469e17fbc6298855a&amp;type=3#Classement_style" />
     <ui:VisualElement name="MainContainer">
         <ui:VisualElement name="Fenetre">
-            <ui:VisualElement name="Header" style="align-items: center;">
+            <ui:VisualElement name="Header">
                 <ui:Label text="Classement" name="Classement" />
-                <ui:Button name="Quit" style="background-image: none; background-color: rgba(51, 51, 51, 255);">
-                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Images/Vector.png?fileID=21300000&amp;guid=ea2a3af71c558c64e8e70cd0fdc10e84&amp;type=3#Vector&apos;); width: 14px; height: 14px;" />
-                </ui:Button>
+                <ui:Button name="Quit" style="background-image: url(&apos;project://database/Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/d_iconclosebutton@2x.png?fileID=2800000&amp;guid=0525793900d728a42936791a8a6de63b&amp;type=3#d_iconclosebutton@2x&apos;);" />
             </ui:VisualElement>
             <ui:VisualElement name="Body">
                 <ui:VisualElement name="Tools">
                     <ui:VisualElement name="Add">
-                        <ui:TextField text="Nouveau participant" name="TextField" />
-                        <ui:Button text="Ajouter à la liste" name="AddButton" />
+                        <ui:TextField name="TextField" style="flex-grow: 5; align-items: stretch; justify-content: space-between;" />
+                        <ui:Button text="Ajouter à la liste" name="AddButton" style="flex-grow: 1;" />
                     </ui:VisualElement>
                     <ui:VisualElement name="Switch">
-                        <ui:Toggle label="Toggle" name="Toggle"/>
+                        <ui:Toggle label="Ajouter au pied de la liste" name="Toggle" value="true" focusable="false" />
                     </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:ListView focusable="true" name="List" />
-                <ui:VisualElement name="Delete" style="flex-direction: row;">
-                    <ui:Button text="Button" name="DeleteButton" />
+                <ui:VisualElement name="Delete">
+                    <ui:Button text="Retirer de la liste" name="DeleteButton" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

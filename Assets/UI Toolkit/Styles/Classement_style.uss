@@ -20,18 +20,20 @@
     border-color: rgb(77, 77, 77);
     border-width: 0 0 2px 0;
     border-radius: 8px 8px 0 0;
-    align-items: flex-start;
+    align-items: center;
     align-self: stretch;
     padding-left: 32px;
     padding-right: 32px;
     padding-top: 32px;
     padding-bottom: 32px;
+    height: 106px;
 }
 
 #Classement {
     font-size: 32px;
     flex-grow: 1;
     color: rgb(255, 255, 255);
+    -unity-text-align: middle-left;
 }
 
 #Quit {
@@ -41,53 +43,172 @@
     padding: 0 10px;
     width: 40px;
     height: 40px;
+    background-color: rgb(51, 51, 51);
+    border-left-color: rgb(51, 51, 51);
+    border-right-color: rgb(51, 51, 51);
+    border-top-color: rgb(51, 51, 51);
+    border-bottom-color: rgb(51, 51, 51);
 }
 
 #Body {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 32px;
     align-items: center;
     align-self: stretch;
     flex-grow: 1;
+    border-left-color: rgb(38, 38, 38);
+    border-right-color: rgb(38, 38, 38);
+    border-top-color: rgb(38, 38, 38);
+    border-bottom-color: rgb(38, 38, 38);
+    justify-content: space-around;
+    height: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 #Tools {
-    height: 88px;
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
+    justify-content: space-around;
+    flex-grow: 0;
 }
 
 #Add {
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#unity-text-input {
+    background-color: rgb(77, 77, 77);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    background-color: rgb(51, 51, 51);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #TextField {
     flex-grow: 1;
-    width: 518px;
-    height: 40px;
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: center;
     padding: 19px 16px;
     font-size: 16px;
-    padding-left: 19px;
-    padding-right: 16px;
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
+    background-color: rgb(51, 51, 51);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-color: rgb(77, 77, 77);
+    border-right-color: rgb(77, 77, 77);
+    border-top-color: rgb(77, 77, 77);
+    border-bottom-color: rgb(77, 77, 77);
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-shrink: 1;
+    justify-content: flex-start;
+    -unity-background-image-tint-color: rgb(51, 51, 51);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#TextField:focus {
+    border-color: rgb(0, 217, 178);
 }
 
 #AddButton {
     flex-direction: row;
-    height: 40px;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 24px;
+    flex-grow: 0;
+    padding-left: 24px;
+    -unity-text-align: middle-center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: rgb(0, 217, 178);
+    color: rgb(38, 38, 38);
+    font-size: 16px;
+}
+
+#Switch {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-grow: 0;
+}
+
+#Toggle {
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0 24px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
 }
 
 #List {
-    background-color: rgb(255, 255, 255);
     flex-grow: 1;
     flex-direction: row;
+    align-items: flex-start;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-color: rgb(77, 77, 77);
+    border-right-color: rgb(77, 77, 77);
+    border-top-color: rgb(77, 77, 77);
+    border-bottom-color: rgb(77, 77, 77);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin-top: 20px;
+    height: auto;
+}
+
+#Delete {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    flex-grow: 0;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#DeleteButton {
+    background-color: rgb(255, 57, 93);
+    font-size: 16px;
+    -unity-font-style: bold;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
